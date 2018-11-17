@@ -1,0 +1,141 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+
+<div class="content-wrapper">
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title">
+							<i class="fa fa-folder-open-o"></i>
+							<b> BOI Definition Request List</b>
+						</h3>
+						<button type="submit" class="btn btn-sm btn-default pull-right">Export</button>
+					</div>
+					<!-- form start -->
+					<div class="box-body">
+						<div class="box-info with-border">
+							<table id="example1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Date</th>
+										<th>BOI Type</th>
+										<th>Description</th>
+										<th>Requestor</th>
+										<th>Remark</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="width: 100px;text-align: center">09/09/18</td>
+										<td style="width: 100px;text-align: center">Machine</td>
+										<td>
+											เป็นเครื่องทำความร้อนให้กับชิ้นงานหรือบริเวณเฉพาะ
+											โดยจะมีท่อต่อออกจากตัวเครื่องแล้วนำหัวทำความร้อนไปจ่อที่ตัวงานหรือบริเวณที่ต้องการเพิ่มอุณหภูมิ
+										</td>
+										<td>Woottipong</td>
+										<td></td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt" data-toggle="modal"
+													data-target="#exampleModal" aria-expanded="true" aria-controls="collapseOne">
+												Update
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td style="width: 100px;text-align: center">09/09/18</td>
+										<td style="width: 80px;text-align: center">Spare Part</td>
+										<td>แกนโลหะสำหรับยึดเครื่องทดสอบกับอุปกรณ์สำหรับตรวจสอบความแบนราบของระนาบของเครื่องจักรเข้าด้วยกัน</td>
+										<td>Sakol</td>
+										<td></td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt" data-toggle="modal"
+													data-target="#exampleModal" aria-expanded="true" aria-controls="collapseOne">
+												Update
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td style="width: 100px;text-align: center">10/09/18</td>
+										<td style="width: 80px;text-align: center">Spare Part</td>
+										<td>เป็นชิ้นส่วนตัวพยุงลดแรงกระแทกของชุดรับชิ้นงานลงสู่จุดทดสอบ ทำจากพลาสติก/โลหะ</td>
+										<td>Salok</td>
+										<td></td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt" data-toggle="modal"
+													data-target="#exampleModal" aria-expanded="true" aria-controls="collapseOne">
+												Update
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">BOI Definition</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label class="col-sm-3 form-label">BOI Type : </label>
+							<fieldset id="boitype">
+								<input type="radio" class="minimal-red" name="boitype">
+								<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+									   for="boitype">Spare Part</label>
+								<input type="radio" class="minimal-red" name="boitype">
+								<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+									   for="boitype">Machine</label>
+							</fieldset>
+						</div>
+						<div class="form-group">
+							<label class="col-form-label">Baan/BOI No :</label>
+							<input type="text" class="form-control" id="boino" placeholder="Baan/BOI No">
+						</div>
+						<!--def thai-->
+						<div class="form-group">
+							<label class="col-form-label">Definition (Thai) :</label>
+							<input type="text" class="form-control" id="defthai" placeholder="Definition (Thai)">
+						</div>
+						<!--def eng-->
+						<div class="form-group">
+							<label class="col-form-label">Definition (Eng) :</label>
+							<input type="text" class="form-control" id="defeng" placeholder="Definition (Eng)">
+						</div>
+						<!--def-->
+						<div class="form-group">
+							<label class="col-form-label">Description :</label>
+							<input type="text" class="form-control" id="des" placeholder="description">
+						</div>
+						<!--Unit-->
+						<div class="form-group">
+							<label class="col-form-label">Unit :</label>
+							<input type="text" class="form-control" id="unit" placeholder="Unit">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Update</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

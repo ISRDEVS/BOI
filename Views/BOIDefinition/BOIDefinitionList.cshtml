@@ -1,0 +1,142 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+
+<div class="content-wrapper">
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title">
+							<i class="fa fa-folder-open-o"></i>
+							<b> BOI Definition List</b>
+						</h3>
+						<button type="submit" class="btn btn-sm btn-default pull-right">Export</button>
+					</div>
+					<!-- form start -->
+					<div class="box-body">
+						<div class="box-info with-border">
+							<table id="example1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Baan/BOI No</th>
+										<th>BOI Type</th>
+										<th>BOI Definition (ENG)</th>
+										<th>BOI Definition (THAI)</th>
+										<th>Description</th>
+										<th>Unit</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="width: 120px;text-align: center">E00001</td>
+										<td style="width: 100px;text-align: center">Machine</td>
+										<td>AUTOMATED WAFER PACKER/UNPACKER</td>
+										<td>เครื่องสำหรับบรรุเวเฟอร์และนำออกจากภาชนะบรรุเวเฟอร์</td>
+										<td></td>
+										<td style="text-align: center">PIECE OR UNIT</td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt" data-toggle="modal" data-target="#exampleModal" aria-expanded="true"
+													aria-controls="collapseOne">
+												View
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td style="width: 100px;text-align: center">P00037</td>
+										<td style="width: 80px;text-align: center">Spare Part</td>
+										<td>AIR TENSIONER ASSEMBLY</td>
+										<td>หลอดลมใช้ประคองเส้นลวด ทำจากเซรามิคและอลูมิเนียม</td>
+										<td></td>
+										<td style="text-align: center">PIECE OR UNIT</td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt" data-toggle="modal" data-target="#exampleModal" aria-expanded="true"
+													aria-controls="collapseOne">
+												View
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td style="width: 100px;text-align: center">P00038</td>
+										<td style="width: 80px;text-align: center">Spare Part</td>
+										<td>AIR TRACK.</td>
+										<td>รางสำหรับส่งชิ้นงานไปยังหัวจับงาน ทำจากโลหะ</td>
+										<td></td>
+										<td style="text-align: center">PIECE OR UNIT</td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt" data-toggle="modal" data-target="#exampleModal" aria-expanded="true"
+													aria-controls="collapseOne">
+												View
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">BOI Definition</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="input-group">
+						<div class="custom-file">
+							<div class="col-sm-6">
+								<table class="table table-bordered table-hover">
+									<thead>
+										<tr>
+											<th>BOI No</th>
+											<th>Project Code</th>
+										</tr>
+									</thead>
+									<tr>
+										<td class="bg-info" style="width:100px">BOI#7</td>
+										<td style="width:120px">656432</td>
+									</tr>
+									<tr>
+										<td class="bg-info" style="width:100px">BOI#8</td>
+										<td style="width:120px">656433</td>
+									</tr>
+									<tr>
+										<td class="bg-info" style="width:100px">BOI#9</td>
+										<td style="width:120px">656438</td>
+									</tr>
+									<tr>
+										<td class="bg-info" style="width:100px">BOI#10</td>
+										<td style="width:120px">656668</td>
+									</tr>
+								</table>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="inputEmail" class="col-sm-2 control-label">Note</label>
+									<textarea id="compose-textarea" class="form-control" style="width:270px;height: 160px">
+                          </textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

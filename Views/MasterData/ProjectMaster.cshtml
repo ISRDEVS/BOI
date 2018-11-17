@@ -1,0 +1,582 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+
+<div class="content-wrapper">
+	<section class="content-header">
+		<h1><i class="fa fa-handshake-o"></i> Project Master</h1>
+	</section>
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="nav-tabs-custom">
+					<ul class="nav nav-tabs">
+						<!--  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+							  Launch Default Modal
+							</button> -->
+						<li class="active"><a href="#shipperlist" data-toggle="tab">Project Master List</a></li>
+						<li><a href="#CCMYL" data-toggle="tab">Certificate Capacity (MU/YEAR) List</a></li>
+						<li><a href="#CITL" data-toggle="tab">CIT Capacity (THB) List</a></li>
+						<li><a href="#newitem" data-toggle="tab">New Item</a></li>
+					</ul>
+					<div style="overflow-x: scroll; scrollbar-arrow-color:blue; scrollbar-face-color: #e7e7e7; scrollbar-3dlight-color: #a0a0a0; scrollbar-darkshadow-color:#888888" class="tab-content">
+						<div class="active tab-pane" id="shipperlist">
+							<table id="tbl1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Item</th>
+										<th>MTHAI</th>
+										<th>MMT</th>
+										<th>Category</th>
+										<th>Certificate No</th>
+										<th>Date Of Certificate Approved</th>
+										<th>Date Of Promotion Certificate</th>
+										<th>Production Start Date</th>
+										<th>The Date Of 1ST Income</th>
+										<th>Length Of Income Tax Exemption</th>
+										<th>Full Commencement Due Date Submitted</th>
+										<th>Full Commencement Date Approved</th>
+										<th>Expiration Date Of Import Machine</th>
+										<th>Expiration Date Of Exemption Income</th>
+										<th>Certificate Capacity (MU/YEAR)</th>
+										<th>Working Time/Working Day (Hrs:day:Day)</th>
+										<th>Fist Income Date</th>
+										<th>Capacity  Status</th>
+										<th>Closed Project</th>
+										<th>CIT Capacity (THB)</th>
+										<th>Annoucement</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="width: 50px;text-align: center">1</td>
+										<td style="width: 150px;text-align: center">08/21/2017</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt">Delete</button>
+										</td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button type="button" class="btn btn-link font-weight-danger" style="padding: 0pt" data-toggle="modal" data-target="#modal-default">
+												Update
+											</button>
+											<!--  <button class="btn btn-link font-weight-danger" style="padding: 0pt">Update</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- /.tab-pane -->
+						<div class="tab-pane" id="CCMYL">
+							<table id="tbl1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Item</th>
+										<th>Subject</th>
+										<th>MU/YEAR</th>
+										<th></th>
+										<th></th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="width: 50px;text-align: center">1</td>
+										<td style="width: 150px;text-align: center">08/21/2017</td>
+										<td></td>
+
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt">Delete</button>
+										</td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button type="button" class="btn btn-link font-weight-danger" style="padding: 0pt" data-toggle="modal" data-target="#modal-defaultccmy">
+												Update
+											</button>
+											<!--  <button class="btn btn-link font-weight-danger" style="padding: 0pt">Update</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class=" tab-pane" id="CITL">
+							<table id="tbl1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Item</th>
+										<th>Year</th>
+										<th>THB</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="width: 50px;text-align: center">1</td>
+										<td style="width: 150px;text-align: center">08/21/2017</td>
+										<td></td>
+
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt">Delete</button>
+										</td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button type="button" class="btn btn-link font-weight-danger" style="padding: 0pt" data-toggle="modal" data-target="#modal-defaultcit">
+												Update
+											</button>
+											<!--  <button class="btn btn-link font-weight-danger" style="padding: 0pt">Update</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tab-pane" id="newitem">
+							<div class="nav-tabs-custom">
+								<ul class="nav nav-tabs">
+									<!--  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+										  Launch Default Modal
+										</button> -->
+									<li class="active"><a href="#newitemproject" data-toggle="tab">Project Master</a></li>
+									<li><a href="#muyear" data-toggle="tab">Certificate Capacity (MU/YEAR)</a></li>
+									<li><a href="#CIT" data-toggle="tab">CIT Capacity (THB)</a></li>
+								</ul>
+
+								<div class="tab-content">
+									<!-- /.tab-pane -->
+
+									<div class=" active tab-pane" id="newitemproject">
+										<form class="form-horizontal">
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">MTHAI</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="MTHAI">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">MMT</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="MMT">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Category</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Category">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Certificate No</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Certificate No">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Date Of Certificate Approved</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Date Of Certificate Approved">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Date Of Promotion Certificate</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Date Of Promotion Certificate">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Production Start Date</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Production Start Date">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">The Date Of 1ST Income</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="The Date Of 1ST Income">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Length Of Income Tax Exemption</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Length Of Income Tax Exemption">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Full Commencement Due Date Submitted</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Full Commencement Due Date Submitted">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Full Commencement Date Approved</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Full Commencement Date Approved">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Expiration Date Of Import Machine</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Expiration Date Of Import Machine">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Expiration Date Of Exemption Income</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Expiration Date Of Exemption Income">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Certificate Capacity (MU/YEAR)</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Certificate Capacity (MU/YEAR)">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Working Time/Working Day (Hrs:day:Day)</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Working Time/Working Day (Hrs:day:Day)">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Fist Income Date</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Fist Income Date">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Capacity  Status</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Capacity  Status">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Closed Project</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Closed Project">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">CIT Capacity (THB)</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="CIT Capacity (THB)">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Annoucement</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Annoucement">
+												</div>
+											</div>
+
+											<div class="col-sm-2"></div>
+											<div class="form-group">
+												<div class="col-sm-offset-2 col-sm-10">
+													<button type="submit" class="btn btn-success">Save</button>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="tab-pane" id="muyear">
+										<form class="form-horizontal">
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Subject</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Subject">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">MU/YEAR</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="MU/YEAR">
+												</div>
+											</div>
+
+
+											<div class="col-sm-2"></div>
+											<div class="form-group">
+												<div class="col-sm-offset-2 col-sm-10">
+													<button type="submit" class="btn btn-success">Save</button>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="tab-pane" id="CIT">
+										<form class="form-horizontal">
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">Year</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="Year">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputName" class="col-sm-2 control-label">THB</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" id="shipper" placeholder="MU/THB">
+												</div>
+											</div>
+
+
+											<div class="col-sm-2"></div>
+											<div class="form-group">
+												<div class="col-sm-offset-2 col-sm-10">
+													<button type="submit" class="btn btn-success">Save</button>
+												</div>
+											</div>
+										</form>
+									</div>
+									<!-- /.tab-pane -->
+								</div>
+								<!-- /.tab-content -->
+							</div>
+						</div>
+						<!-- /.tab-pane -->
+					</div>
+					<!-- /.tab-content -->
+				</div>
+				<!-- /.nav-tabs-custom -->
+			</div>
+		</div>
+	</section>
+
+</div>
+<div class="modal fade" id="modal-default">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Project Master List</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">MTHAI</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="MTHAI">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">MMT</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="MMT">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Category</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Category">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Certificate No</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Certificate No">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Date Of Certificate Approved</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Date Of Certificate Approved">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Date Of Promotion Certificate</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Date Of Promotion Certificate">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Production Start Date</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Production Start Date">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">The Date Of 1ST Income</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="The Date Of 1ST Income">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Length Of Income Tax Exemption</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Length Of Income Tax Exemption">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Full Commencement Due Date Submitted</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Full Commencement Due Date Submitted">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Full Commencement Date Approved</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Full Commencement Date Approved">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Expiration Date Of Import Machine</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Expiration Date Of Import Machine">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Expiration Date Of Exemption Income</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Expiration Date Of Exemption Income">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Certificate Capacity (MU/YEAR)</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Certificate Capacity (MU/YEAR)">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Working Time/Working Day (Hrs:day:Day)</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Working Time/Working Day (Hrs:day:Day)">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Fist Income Date</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Fist Income Date">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Capacity  Status</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Capacity  Status">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Closed Project</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Closed Project">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">CIT Capacity (THB)</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="CIT Capacity (THB)">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Annoucement</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Annoucement">
+						</div>
+					</div>
+
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal fade" id="modal-defaultccmy">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Project Master List</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Subject</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Subject">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">MU/YEAR</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="MU/YEAR">
+						</div>
+					</div>
+
+
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal fade" id="modal-defaultcit">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Project Master List</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Year</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Year">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">THB</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="MU/THB">
+						</div>
+					</div>
+
+
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

@@ -1,0 +1,253 @@
+@using System.Data;
+@model DataTable;
+
+@{
+	Layout = "_Homes";
+	int num = 1;
+	bool CheckSave = (bool)ViewData["Save"];
+	
+}
+<script src="~/js/jquery-3.3.1.js"></script>
+
+<div class="content-wrapper">
+	<section class="content-header">
+		<h1><i class="fa fa-handshake-o"></i> Shipper</h1>
+
+	</section>
+
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="nav-tabs-custom">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#shipperlist" data-toggle="tab">Shipper List</a></li>
+						<li><a href="#newitem" data-toggle="tab">New Item</a></li>
+					</ul>
+
+					<div class="tab-content">
+						<div class="active tab-pane" id="shipperlist">
+							<table id="tbl1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Item</th>
+										<th>Origin Country</th>
+										<th>Shipper</th>
+										<th>Shot Name</th>
+										<th>Address</th>
+										<th>Country Code</th>
+										<th>Zip code</th>
+										<th>Airport</th>
+										<th>Incoterm</th>
+										<th>Shipment Privilege</th>
+										<th>Description</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (DataRow rows in @Model.Rows)
+									{
+										<tr>
+											<td style="width: 50px;text-align: center">@num</td>
+											<td style="width: 150px;text-align: center">@rows["OriginCountry"]</td>
+											<td>@rows["Shipper"]</td>
+											<td>@rows["ShotName"]</td>
+											<td>@rows["Address"]</td>
+											<td>@rows["CountryCode"]</td>
+											<td>@rows["Zipcode"]</td>
+											<td>@rows["Airport"]</td>
+											<td>@rows["Incoterm"]</td>
+											<td>@rows["ShipmentPrivilege"]</td>
+											<td>@rows["Description"]</td>
+											<td class="text-center" style="width: 60px;text-align: center">
+												<button class="btn btn-link font-weight-light" style="padding: 0pt">Delete</button>
+											</td>
+
+											<td class="text-center" style="width: 60px;text-align: center">
+												<button type="button" class="btn btn-link font-weight-danger" style="padding: 0pt" data-toggle="modal" data-target="#modal-default">
+													Update
+												</button>
+												<!--   <button class="btn btn-link font-weight-danger" style="padding: 0pt">Update</button>c-->
+											</td>
+										</tr>
+
+
+										num++;
+									}
+
+								</tbody>
+							</table>
+
+						</div>
+						<!-- /.tab-pane -->
+
+						<div class="tab-pane" id="newitem">
+							<form method="post" id="fromaddshiper" role="form" class="form-horizontal">
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">Origin Country</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="OriginCountry" id="OriginCountry" placeholder="Origin Country">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputEmail" class="col-sm-2 control-label">Shipper</label>
+
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="Shipper" id="Shipper" placeholder="Shipper">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">Shot Name</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="ShotName" id="ShotName" placeholder="Shot Name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">Address</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="Address" id="Address" placeholder="Address">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">Country Code</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="CountryCode" id="CountryCode" placeholder="Country Code">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">Zip code</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="Zipcode" id="Zipcode" placeholder="Zip code">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">Airport</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="Airport" id="Airport" placeholder="Airport">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">Incoterm</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="Incoterm" id="Incoterm" placeholder="Incoterm">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">Shipment Privilege</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="ShipmentPrivilege" id="ShipmentPrivilege" placeholder="Shipment Privilege">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">Description</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="Description" id="Description" placeholder="Description">
+									</div>
+								</div>
+								<div class="col-sm-2"></div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<button type="button"  onclick="SaveData('fromaddshiper','MasterData','SaveShiper')" class="btn btn-success">Save</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- /.tab-pane -->
+					</div>
+					<!-- /.tab-content -->
+				</div>
+				<!-- /.nav-tabs-custom -->
+			</div>
+		</div>
+	</section>
+
+
+
+</div>
+<div class="modal fade" id="modal-default">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Update Shipper List</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Origin Country</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Origin Country">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail" class="col-sm-2 control-label">Shipper</label>
+
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="description" placeholder="Shipper">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Shot Name</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Shot Name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Address</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Address">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Country Code</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Country Code">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Zip code</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Zip code">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Airport</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Airport">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Incoterm</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Incoterm">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Shipment Privilege</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Shipment Privilege">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Description</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Description">
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<script type="text/javascript" src="~/js/Action.js"></script>

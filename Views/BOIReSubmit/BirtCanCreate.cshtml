@@ -1,0 +1,97 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+
+<div class="content-wrapper">
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title"><i class="fa fa-pencil-square-o"></i><b> BirtCan Create</b></h3>
+						<button type="submit" class="btn btn-sm btn-success pull-right" style="margin-left: 5px">Save</button>
+						<button type="submit" class="btn btn-sm btn-primary pull-right" style="margin-left: 5px">EXCEL</button>
+						<button type="submit" class="btn btn-sm btn-warning pull-right" style="margin-left: 5px">Apply</button>
+						<button type="submit" class="btn btn-sm btn-default pull-right">Search</button>
+						<div class="col-md-3 pull-right">
+							<input [(ngModel)]="invoiceinfo.docno" required name="hawbno" type="text" class="form-control-sm pull-right" id="docno" placeholder="Doc No, APP No">
+						</div>
+					</div>
+					<!-- form start -->
+					<div class="box-body">
+						<div class="box-info with-border">
+							<table id="tbl1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th style="width: 40px;text-align: center">
+											<input type="checkbox" id="chkall">
+										</th>
+										<th>Project Code</th>
+										<th>Doc No</th>
+										<th>APP No</th>
+										<th>APP Date</th>
+										<th>Invoice No</th>
+										<th>Type Of Goods</th>
+										<th>Total Line</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="width: 30px;text-align: center"></td>
+										<td style="width: 120px;text-align: center">M6000311</td>
+										<td style="width: 120px;text-align: center">00032736</td>
+										<td style="text-align: center">นร1306R601200038539</td>
+										<td style="width: 120px;text-align: center">12/21/2017</td>
+										<td style="width: 120px;text-align: center">7717059278</td>
+										<td style="width: 120px;text-align: center">A</td>
+										<td style="width: 100px;text-align: center">15</td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt">View</button>
+										</td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-danger" style="padding: 0pt">Remove</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="box-info with-border">
+							<table id="tbl2" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Project Code</th>
+										<th>Doc No</th>
+										<th>APP No</th>
+										<th>Reason</th>
+										<th>Internal Note</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="width: 120px;text-align: center">M6000311</td>
+										<td style="width: 70px;text-align: center">00022937</td>
+										<td style="width: 170px;text-align: center">นร1306R601200038539</td>
+										<td style="width: 300px">
+											<input type="text" class="form-control" id="reason" style="width: 100%">
+										</td>
+										<td>
+											<input type="text" class="form-control" id="note" style="width: 100%">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+

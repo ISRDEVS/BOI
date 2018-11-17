@@ -1,0 +1,156 @@
+﻿@using System.Data;
+@model DataTable;
+@{
+	Layout = "_Homes";
+	int num = 1;
+}
+
+<div class="content-wrapper">
+	<section class="content-header">
+		<h1><i class="fa fa-handshake-o"></i> Currency</h1>
+	</section>
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="nav-tabs-custom">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#shipperlist" data-toggle="tab">Currency List</a></li>
+						<li><a href="#newitem" data-toggle="tab">New Item</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="active tab-pane" id="shipperlist">
+							<table id="tbl1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Item</th>
+										<th>CurrencyCode</th>
+										<th>Description</th>
+										<th>ประเทศ</th>
+										<th>สกุลเงิน</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (DataRow rows in Model.Rows)
+									{
+										<tr>
+											<td style="width: 50px;text-align: center">@num</td>
+											<td style="width: 150px;text-align: center">@rows["currencyCode"]</td>
+											<td>@rows["description"]</td>
+											<td>@rows["countryTH"]</td>
+											<td>@rows["currencyTH"]</td>
+
+											<td class="text-center" style="width: 60px;text-align: center">
+												<button class="btn btn-link font-weight-light" style="padding: 0pt">Delete</button>
+											</td>
+											<td class="text-center" style="width: 60px;text-align: center">
+
+												<button type="button" class="btn btn-link font-weight-danger" style="padding: 0pt" data-toggle="modal" data-target="#modal-default">
+													Update
+												</button>
+												<!-- <button class="btn btn-link font-weight-danger" style="padding: 0pt">Update</button> -->
+											</td>
+										</tr>
+										num++;
+									}
+
+								</tbody>
+							</table>
+						</div>
+						<!-- /.tab-pane -->
+						<div class="tab-pane" id="newitem">
+							<form class="form-horizontal" id="addcurrencylistfrom">
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">CurrencyCode</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="CurrencyCode" id="CurrencyCode" placeholder="Currency Code">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputEmail" class="col-sm-2 control-label">Description</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="Description" id="Description" placeholder="Description">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">ประเทศ</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="CountryTH" id="CountryTH" placeholder="ประเทศ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">สกุลเงิน</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="CurrencyTH" id="CurrencyTH" placeholder="สกุลเงิน">
+									</div>
+								</div>
+
+								<div class="col-sm-2"></div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<button type="button" onclick="SaveData('addcurrencylistfrom','Currency','SavesCurrencylist')" class="btn btn-success">Save</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- /.tab-pane -->
+					</div>
+					<!-- /.tab-content -->
+				</div>
+				<!-- /.nav-tabs-custom -->
+			</div>
+		</div>
+	</section>
+
+</div>
+
+<div class="modal fade" id="modal-default">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Update Currency  List</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">CurrencyCode</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Origin Country">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail" class="col-sm-2 control-label">Description</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="description" placeholder="Description">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">ประเทศ</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="ประเทศ">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">สกุลเงิน</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="สกุลเงิน">
+						</div>
+					</div>
+
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+

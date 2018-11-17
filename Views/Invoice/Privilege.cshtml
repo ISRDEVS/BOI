@@ -1,0 +1,84 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+<div class="content-wrapper">
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title"><i class="fa fa-info-circle"></i><b> Previlege</b></h3>
+						<button type="submit" class="btn btn-success pull-right" style="margin-left: 5px">Save</button>
+						<button type="submit" class="btn btn-default pull-right">Search</button>
+						<div class="col-md-3 pull-right">
+							<input [(ngModel)]="invoiceinfo.hawbno" required name="hawbno" type="text" class="form-control pull-right" id="hawbno" placeholder="HAWB Number">
+						</div>
+					</div>
+					<!-- form start -->
+					<div class="box-body">
+						<div class="box-box-body box-info with-border col-md-4">
+							<table id="tbl1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white textcenter">
+									<tr>
+										<th>Invoice Number</th>
+										<th>Shipper</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2017-MTH-09-G178</td>
+										<td>TEXAS</td>
+										<td class="text-center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt">Select</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="box-box-body box-info with-border col-md-8">
+							<table id="tbl2" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white textcenter">
+									<tr>
+										<th>Line No.</th>
+										<th>Type of goods</th>
+										<th>BOI/TAX</th>
+										<th>Remark</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="width: 70px;text-align: center">1</td>
+										<td style="width: 150px;text-align: center">
+											<fieldset id="gtype">
+												<input type="radio" class="minimal-red" name="gtype">
+												<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal" for="gtype">   RAW</label>
+												<input type="radio" class="minimal-red" name="gtype">
+												<label class="custom-control-label-sm" style="margin-left:7px;font-weight: normal" for="gtype"> SP/MC</label>
+											</fieldset>
+										</td>
+										<td style="width: 150px;text-align: center">
+											<fieldset id="boitax">
+												<input type="radio" class="minimal-red" name="boitax">
+												<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal" for="boitax">  BOI</label>
+												<input type="radio" class="minimal-red" name="boitax">
+												<label class="custom-control-label-sm" style="margin-left:7px;font-weight: normal" for="boitax"> TAX</label>
+											</fieldset>
+										</td>
+										<td><input type="text" class="form-control" style="width: 100%"> </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+

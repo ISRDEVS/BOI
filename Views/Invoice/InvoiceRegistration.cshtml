@@ -1,0 +1,287 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+
+<div class="content-wrapper">
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title"><i class="fa fa-edit"></i><b> Invoice Registration</b></h3>
+						<button type="submit" class="btn btn-sm btn-success pull-right" style="margin-left: 10px">Save</button>
+						<button type="submit" class="btn btn-sm btn-info pull-right" style="margin-left: 10px" data-toggle="modal"
+								data-target="#exampleModal" aria-expanded="true">
+							Import
+						</button>
+						<button type="submit" class="btn btn-sm btn-default pull-right">New Item</button>
+					</div>
+					<!-- form start -->
+					<form class="form-horizontal">
+						<div class="box-body">
+							<!--Invoice Number-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Invoice Number :</label>
+								<div class="col-sm-7">
+									<input #spy [(ngModel)]="invoiceinfo.invoiceno" required name="invoiceno" type="text" class="form-control"
+										   id="invoiceno" placeholder="Invoice Number">
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!--Invoice Date-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Invoice Date :</label>
+								<div class="col-sm-7">
+									<div class="input-group date">
+										<div class="input-group-addon">
+											<i class="fa fa-calendar"></i>
+										</div>
+										<input type="text" class="form-control pull-right" id="datepicker">
+									</div>
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!-- Shipper -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Shipper :</label>
+								<div class="col-sm-7">
+									<select class="form-control select2" style="width: 100%;">
+										<option selected="selected">Alabama</option>
+										<option>Alaska</option>
+										<option>California</option>
+										<option>Delaware</option>
+										<option>Tennessee</option>
+										<option>Texas</option>
+										<option>Washington</option>
+									</select>
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!--HAWB-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">HAWB Number :</label>
+								<div class="col-sm-7">
+									<input [(ngModel)]="invoiceinfo.hawbno" type="text" class="form-control" id="remark" placeholder="HAWB Number">
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!-- Ship to -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Ship To :</label>
+								<div class="col-sm-7">
+									<fieldset id="shipto">
+										<input type="radio" class="minimal-red" name="shipto">
+										<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+											   for="shipto">14 (HQ)</label>
+										<input type="radio" class="minimal-red" name="shipto">
+										<label class="custom-control-label-sm" style="margin-left:7px;font-weight: normal" for="shipto">
+											17
+											(BRANCH)
+										</label>
+									</fieldset>
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!-- Transport Mode -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Transport Mode :</label>
+								<div class="col-sm-7">
+									<fieldset id="transportmode">
+										<input type="radio" class="minimal-red" name="transportmode">
+										<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+											   for="transportmode">AIR</label>
+										<input type="radio" class="minimal-red" name="transportmode">
+										<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+											   for="transportmode">SEA</label>
+										<input type="radio" class="minimal-red" name="transportmode">
+										<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+											   for="transportmode">TRUCK LOCAL</label>
+										<input type="radio" class="minimal-red" name="transportmode">
+										<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+											   for="transportmode">TRUCK OVERSEA</label>
+										<input type="radio" class="minimal-red" name="transportmode">
+										<label class="custom-control-label-sm" style="margin-left:7px;font-weight: normal" for="transportmode">
+											HAND CARRY
+										</label>
+									</fieldset>
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!-- Type Of Good -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type Of Goods :</label>
+								<div class="col-sm-7">
+									<fieldset id="typeofgood">
+										<input type="radio" class="minimal-red" name="typeofgood">
+										<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+											   for="typeofgood">Raw Mat</label>
+										<input type="radio" class="minimal-red" name="typeofgood">
+										<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+											   for="typeofgood">Machine</label>
+										<input type="radio" class="minimal-red" name="typeofgood">
+										<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+											   for="typeofgood">Spare Part</label>
+										<input type="radio" class="minimal-red" name="typeofgood">
+										<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+											   for="typeofgood">Finish Goods</label>
+										<input type="radio" class="minimal-red" name="typeofgood">
+										<label class="custom-control-label-sm" style="margin-left:7px;font-weight: normal" for="typeofgood">
+											RMA
+										</label>
+										<input type="radio" class="minimal-red" name="typeofgood">
+										<label class="custom-control-label-sm" style="margin-left:7px;font-weight: normal" for="typeofgood">
+											SAMPLE
+										</label>
+									</fieldset>
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!-- Delivery Term -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Delivery Term :</label>
+								<div class="col-sm-7">
+									<select class="form-control select2" style="width: 100%;">
+										<option selected="selected">Alabama</option>
+										<option>Alaska</option>
+										<option>California</option>
+										<option>Delaware</option>
+										<option>Tennessee</option>
+										<option>Texas</option>
+										<option>Washington</option>
+									</select>
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!-- Origin -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Ship From :</label>
+								<div class="col-sm-7">
+									<select class="form-control select2" style="width: 100%;">
+										<option selected="selected">Alabama</option>
+										<option>Alaska</option>
+										<option>California</option>
+										<option>Delaware</option>
+										<option>Tennessee</option>
+										<option>Texas</option>
+										<option>Washington</option>
+									</select>
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!--Port -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Port :</label>
+								<div class="col-sm-7">
+									<select class="form-control select2" style="width: 100%;">
+										<option selected="selected">Alabama</option>
+										<option>Alaska</option>
+										<option>California</option>
+										<option>Delaware</option>
+										<option>Tennessee</option>
+										<option>Texas</option>
+										<option>Washington</option>
+									</select>
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!--Price-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Total Price :</label>
+								<div class="col-sm-7">
+									<input #spy [(ngModel)]="invoiceinfo.price" required name="price" type="text" class="form-control" id="price"
+										   placeholder="Price">
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!--Currency -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Currency :</label>
+								<div class="col-sm-7">
+									<select class="form-control select2" style="width: 100%;">
+										<option selected="selected">Alabama</option>
+										<option>Alaska</option>
+										<option>California</option>
+										<option>Delaware</option>
+										<option>Tennessee</option>
+										<option>Texas</option>
+										<option>Washington</option>
+									</select>
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!--Total Line-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Invoice Lines :</label>
+								<div class="col-sm-7">
+									<input #spy [(ngModel)]="invoiceinfo.line" required name="line" type="text" class="form-control" id="line"
+										   placeholder="Invoice lines">
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!--Total Qty-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Total Qty :</label>
+								<div class="col-sm-7">
+									<input [(ngModel)]="invoiceinfo.totalqty" type="text" class="form-control" id="remark" placeholder="Total Qty">
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!--Term-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Term :</label>
+								<div class="col-sm-7">
+									<input [(ngModel)]="invoiceinfo.term" type="text" class="form-control" id="remark" placeholder="Total Qty">
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!--Contact Person-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Contact Person :</label>
+								<div class="col-sm-7">
+									<input [(ngModel)]="invoiceinfo.contact" type="text" class="form-control" id="remark" placeholder="Total Qty">
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							<!--Remark-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Remark :</label>
+								<div class="col-sm-7">
+									<input [(ngModel)]="invoiceinfo.remark" type="text" class="form-control" id="remark" placeholder="Remark">
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Upload Invoice Info</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="input-group">
+						<div class="custom-file">
+							<input type="file" class="custom-file-input" id="inputGroupFile04">
+							<label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Import</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

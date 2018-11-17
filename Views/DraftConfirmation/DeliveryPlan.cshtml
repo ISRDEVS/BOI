@@ -1,0 +1,151 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+
+<div class="content-wrapper">
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title">
+							<i class="fa fa-reply-all"></i>
+							<b> Delivery Plan</b>
+						</h3>
+						<button type="submit" class="btn btn-sm btn-primary pull-right" style="margin-left: 5px" data-toggle="modal" data-target="#modal-email">Mail to STORE</button>
+						<button type="submit" class="btn btn-sm btn-info pull-right" style="margin-left: 5px" data-toggle="modal" data-target="#modal-upload">Upload</button>
+						<button type="submit" class="btn btn-sm btn-default pull-right">Search</button>
+						<div class="col-md-3 pull-right">
+							<!-- <input  type="text" class="form-control-sm pull-right" placeholder="DOC NO"> -->
+							<div class="input-group">
+								<div class="input-group-addon">
+									<i class="fa fa-calendar"></i>
+								</div>
+								<input type="text" class="form-control pull-right" id="reservation">
+							</div>
+						</div>
+					</div>
+					<!-- form start -->
+					<div class="box-body">
+						<div class="box-info with-border">
+							<table id="tbl2" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Supplier's name</th>
+										<th>Invoice no.</th>
+										<th>Description</th>
+										<th>Job no.</th>
+										<th>Plan in-plant date</th>
+										<th>PLANT</th>
+										<th>HAWB Number</th>
+										<th>Term</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>SUMITOMO</td>
+										<td>ST271017</td>
+										<td>COVER TAPE</td>
+										<td style="width: 150px;text-align: center">RDC10-010/17</td>
+										<td style="width: 150px;text-align: center">31/10/2017  15:00</td>
+										<td style="width: 150px;text-align: center">HQ</td>
+										<td style="width: 150px;text-align: center">413643879245</td>
+										<td style="width: 90px;text-align: center">DDU</td>
+									</tr>
+									<tr>
+										<td>MICROSS</td>
+										<td>1239</td>
+										<td>DIE</td>
+										<td style="width: 150px;text-align: center">FED10-057/17-C</td>
+										<td style="width: 150px;text-align: center">31/10/2017  16:30</td>
+										<td style="width: 150px;text-align: center">BRANCH1</td>
+										<td style="width: 150px;text-align: center">742954198642</td>
+										<td style="width: 90px;text-align: center">DDU</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="modal fade" id="modal-upload" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Upload Delivery Shipment Plan</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="input-group">
+						<div class="custom-file">
+							<input type="file" class="custom-file-input" id="inputGroupFile04">
+							<label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Import</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---->
+	<div class="modal fade" id="modal-email" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Email to STORE</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<div class="col-md-12">
+						<div class="box box-primary">
+
+							<!-- /.box-header -->
+							<div class="box-body">
+								<div class="form-group">
+									<input class="form-control" placeholder="To:">
+								</div>
+								<div class="form-group">
+									<input class="form-control" placeholder="Subject:">
+								</div>
+								<div class="form-group">
+									<textarea id="compose-textarea" class="form-control" style="height: 300px">
+        
+                              </textarea>
+								</div>
+								<div class="form-group">
+									<div class="btn btn-default btn-file">
+										<i class="fa fa-paperclip"></i> Attachment
+										<input type="file" name="attachment">
+									</div>
+									<p class="help-block">Max. 32MB</p>
+								</div>
+							</div>
+
+						</div>
+						<!-- /. box -->
+					</div>
+					<!-- /.col -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Import</button>
+					<button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

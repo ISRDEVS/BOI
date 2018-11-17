@@ -1,0 +1,292 @@
+﻿@using System.Data;
+@{
+	Layout = "_Homes";
+	int num = 1;
+}
+
+<div class="content-wrapper">
+	<section class="content-header">
+		<h1><i class="fa fa-handshake-o"></i> Sparepart</h1>
+	</section>
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="nav-tabs-custom">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#shipperlist" data-toggle="tab">Sparepart List</a></li>
+						<li><a href="#newitem" data-toggle="tab">New Item</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="active tab-pane" id="shipperlist">
+							<table id="tbl1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Item</th>
+										<th>ITEM</th>
+										<th>BOI</th>
+										<th>DESCRIPTION</th>
+										<th>item type</th>
+										<th>รายละเอียด</th>
+										<th>เครื่องจักรหลัก</th>
+										<th>หน่วย</th>
+										<th>มี BOM หรือไม่</th>
+										<th>มาตรา</th>
+										<th>สภาพ</th>
+										<th>หมายเลขขั้นตอนการผลิตในระบบ eMT</th>
+										<th>หมายเลขขั้นตอนการผลิตในระบบ eM</th>
+										<th>ประเภทของขั้นตอนการผลิต</th>
+										<th>ชื่อขั้นตอนการผลิต</th>
+										<th>รายละเอียดขั้นตอนการผลิต</th>
+										<th>หมายเลขผลิตภัณฑ์ eMT</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (DataRow rows in Model.Rows)
+									{
+										<tr *ngFor="let item of spsrepartlist; let i= index">
+											<td style="width: 50px;text-align: center">@num</td>
+											<td style="width: 150px;text-align: center">@rows["item"]</td>
+											<td>@rows["boi"]</td>
+											<td>@rows["description"]</td>
+											<td>@rows["itemtype"]</td>
+											<td>@rows["descriptioN_TH"]</td>
+											<td>@rows["machine"]</td>
+											<td>@rows["unit"]</td>
+											<td>@rows["flag_BOM"]</td>
+											<td>@rows["article"]</td>
+											<td>@rows["condition"]</td>
+											<td>@rows["processeMT_1"]</td>
+											<td>@rows["processeMT_2"]</td>
+											<td>@rows["typessteps"]</td>
+											<td>@rows["processname"]</td>
+											<td>@rows["processDetails"]</td>
+											<td>@rows["emTproductnumber"]</td>
+											<td class="text-center" style="width: 60px;text-align: center">
+												<button class="btn btn-link font-weight-light" style="padding: 0pt">Delete</button>
+											</td>
+											<td class="text-center" style="width: 60px;text-align: center">
+												<button type="button" class="btn btn-link font-weight-danger" style="padding: 0pt" data-toggle="modal" data-target="#modal-default">
+													Update
+												</button>
+												<!-- <button class="btn btn-link font-weight-danger" style="padding: 0pt">Update</button> -->
+											</td>
+										</tr>
+										num++;
+
+									}
+								</tbody>
+							</table>
+						</div>
+						<!-- /.tab-pane -->
+					
+						<div class="tab-pane" id="newitem">
+							<form class="form-horizontal" id="addsparepartfrom">
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">ITEM</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="ITEM" id="ITEM" placeholder="ITEM">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">BOI</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="BOI" id="BOI" placeholder="BOI">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">DESCRIPTION</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="DESCRIPTION" id="DESCRIPTION" placeholder="DESCRIPTION">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">Item Type</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="itemtype" id="itemtype" placeholder="Item Type">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">รายละเอียด</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="DESCRIPTION_TH" id="DESCRIPTION_TH" placeholder="รายละเอียด">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">เครื่องจักรหลัก</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="Machine" id="Machine" placeholder="เครื่องจักรหลัก">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">หน่วย</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="Unit" id="Unit" placeholder="หน่วย">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">มี BOM หรือไม่</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="flag_BOM" id="flag_BOM" placeholder="มี BOM หรือไม่">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">มาตรา</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="article" id="article" placeholder="มาตรา">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">สภาพ</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="condition" id="condition" placeholder="สภาพ">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">หมายเลขขั้นตอนการผลิตในระบบ eMT</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="processeMT_1" id="processeMT_1" placeholder="หมายเลขขั้นตอนการผลิตในระบบ eMT">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">หมายเลขขั้นตอนการผลิตในระบบ eMT</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="processeMT_2" id="processeMT_2" placeholder="หมายเลขขั้นตอนการผลิตในระบบ eMT">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">ประเภทของขั้นตอนการผลิต</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="Typessteps" id="Typessteps" placeholder="ประเภทของขั้นตอนการผลิต">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">ชื่อขั้นตอนการผลิต</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="Processname" id="Processname" placeholder="ชื่อขั้นตอนการผลิต">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">รายละเอียดขั้นตอนการผลิต</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="ProcessDetails" id="ProcessDetails" placeholder="รายละเอียดขั้นตอนการผลิต">
+									</div>
+								</div> <div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">หมายเลขผลิตภัณฑ์ eMT</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="EMTproductnumber" id="EMTproductnumber" placeholder="หมายเลขผลิตภัณฑ์ eMT">
+									</div>
+								</div>
+								<div class="col-sm-2"></div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<button type="button" onclick="SaveData('addsparepartfrom','SparePart','SavesParePart')" class="btn btn-success">Save</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- /.tab-pane -->
+					</div>
+					<!-- /.tab-content -->
+				</div>
+				<!-- /.nav-tabs-custom -->
+			</div>
+		</div>
+	</section>
+
+</div>
+<div class="modal fade" id="modal-default">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Update Sparepart  List</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">ITEM</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="ITEM">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">BOI</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="BOI">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">DESCRIPTION</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="DESCRIPTION">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Item Type</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Item Type">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">รายละเอียด</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="รายละเอียด">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">เครื่องจักรหลัก</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="เครื่องจักรหลัก">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">หน่วย</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="หน่วย">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">มี BOM หรือไม่</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="มี BOM หรือไม่">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">มาตรา</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="มาตรา">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">สภาพ</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="สภาพ">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">หมายเลขขั้นตอนการผลิตในระบบ eMT</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="หมายเลขขั้นตอนการผลิตในระบบ eMT">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">หมายเลขขั้นตอนการผลิตในระบบ eMT</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="หมายเลขขั้นตอนการผลิตในระบบ eMT">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">ประเภทของขั้นตอนการผลิต</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="ประเภทของขั้นตอนการผลิต">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">ชื่อขั้นตอนการผลิต</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="ชื่อขั้นตอนการผลิต">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">รายละเอียดขั้นตอนการผลิต</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="รายละเอียดขั้นตอนการผลิต">
+						</div>
+					</div> <div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">หมายเลขผลิตภัณฑ์ eMT</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="หมายเลขผลิตภัณฑ์ eMT">
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+

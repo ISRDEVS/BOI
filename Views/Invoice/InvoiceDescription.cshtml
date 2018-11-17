@@ -1,0 +1,332 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+<div class="content-wrapper">
+
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title"><i class="fa fa-pencil-square-o"></i><b> Invoice Description</b></h3>
+						<button type="submit" class="btn btn-sm btn-success pull-right" style="margin-left: 10px">Save</button>
+						<button type="submit" class="btn btn-sm btn-default pull-right">Search</button>
+						<div class="col-md-3 pull-right">
+							<input [(ngModel)]="invoiceinfo.hawbno" required name="hawbno" type="text" class="form-control-sm pull-right"
+								   id="hawbno" placeholder="HAWB Number">
+						</div>
+					</div>
+
+					<div class="box-body">
+						<div class="box-info with-border">
+							<table id="tbl1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Invoice Number</th>
+										<th>Invoice Date</th>
+										<th>Shipper</th>
+										<th>Ship To</th>
+										<th>Origin</th>
+										<th>Lines</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="width: 180px;text-align: center">2017-MTH-09-G178</td>
+										<td style="width: 100px;text-align: center">08/21/2017</td>
+										<td>TEXAS</td>
+										<td style="width: 100px;text-align: center">HQ</td>
+										<td style="width: 100px;text-align: center">MAS</td>
+										<td style="width: 100px;text-align: center">5</td>
+										<td class="text-center" style="width: 80px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt">Select</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="box-info with-border">
+							<div class="nav-tabs-custom">
+								<ul class="nav nav-tabs">
+									<li class="active"><a href="#raw" data-toggle="tab">Raw Material</a></li>
+									<li><a href="#spmc" data-toggle="tab">Sapre Part/Machine (Invoice)</a></li>
+									<li><a href="#spmcitem" data-toggle="tab">Sapre Part/Machine (Release Item)</a></li>
+								</ul>
+								<div class="tab-content">
+									<div class="active tab-pane" id="raw">
+										<table id="tbl2" class="table table-bordered table-hover">
+											<thead class="p-3 mb-2 bg-info text-white text-center">
+												<tr>
+													<th>Item</th>
+													<th>Project Code</th>
+													<th>DOC No.</th>
+													<th>Description</th>
+													<th>Qty</th>
+													<th>Price</th>
+													<th>Group</th>
+													<th>UOM</th>
+
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td style="width: 50px;text-align: center;background-color: whitesmoke">1</td>
+													<td style="width: 120px;text-align: center;background-color: whitesmoke">M6000311</td>
+													<td style="width: 120px;text-align: center;background-color: whitesmoke">00027296</td>
+													<td>
+														<select class="form-control-sm select2" style="width: 100%;">
+															<option selected="selected"></option>
+															<option *ngFor="let item of rawmatlist">{{item.byname}}</option>
+
+														</select>
+													</td>
+													<td style="width: 100px;text-align: center">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+												</tr>
+												<tr>
+													<td style="width: 50px;text-align: center;background-color: whitesmoke ">2</td>
+													<td style="width: 120px;text-align: center;background-color: whitesmoke">M6000311</td>
+													<td style="width: 120px;text-align: center;background-color: whitesmoke">00027297</td>
+													<td>
+														<select class="form-control-sm select2" style="width: 100%;">
+															<option selected="selected"></option>
+															<option *ngFor="let item of rawmatlist">{{item.byname}}</option>
+
+														</select>
+													</td>
+													<td style="width: 100px;text-align: center">
+														<input type="text" class="form-control-sm" style="width: 100%">
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+												</tr>
+												<tr>
+													<td style="width: 50px;text-align: center;background-color: whitesmoke">3</td>
+													<td style="width: 120px;text-align: center;background-color: whitesmoke">M6000311</td>
+													<td style="width: 120px;text-align: center;background-color: whitesmoke">00027298</td>
+													<td>
+														<select class="form-control-sm select2" style="width: 100%;">
+															<option selected="selected"></option>
+															<option *ngFor="let item of rawmatlist">{{item.byname}}</option>
+
+														</select>
+													</td>
+													<td style="width: 100px;text-align: center">
+														<input type="text" class="form-control-sm" style="width: 100%">
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+												</tr>
+												<tr>
+													<td style="width: 50px;text-align: center;background-color: whitesmoke">4</td>
+													<td style="width: 120px;text-align: center;background-color: whitesmoke">M6000311</td>
+													<td style="width: 120px;text-align: center;background-color: whitesmoke">00027299</td>
+													<td>
+														<select class="form-control-sm select2" style="width: 100%;">
+															<option selected="selected"></option>
+															<option *ngFor="let item of rawmatlist">{{item.byname}}</option>
+
+														</select>
+													</td>
+													<td style="width: 100px;text-align: center"><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+												</tr>
+												<tr>
+													<td style="width: 50px;text-align: center;background-color: whitesmoke">5</td>
+													<td style="width: 120px;text-align: center;background-color: whitesmoke">M6000311</td>
+													<td style="width: 120px;text-align: center;background-color: whitesmoke">00027300</td>
+													<td>
+														<select class="form-control-sm select2" style="width: 100%;">
+															<option selected="selected"></option>
+															<option *ngFor="let item of rawmatlist">{{item.byname}}</option>
+
+														</select>
+													</td>
+													<td style="width: 100px;text-align: center">
+														<input type="text" class="form-control-sm" style="width: 100%">
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+													<td style="width: 100px;text-align: center;background-color: whitesmoke">
+														<input type="text"
+															   class="form-control-sm" style="width: 100%" readonly=true>
+													</td>
+												</tr>
+												<tr>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td style="width: 100px;text-align: center">
+														<input type="text" class="form-control-sm"
+															   readonly=false style="width: 100%">
+													</td>
+													<td style="width: 100px;text-align: center">
+														<input type="text" class="form-control-sm"
+															   readonly=false style="width: 100%">
+													</td>
+													<td></td>
+													<td></td>
+												</tr>
+
+											</tbody>
+										</table>
+									</div>
+									<div class="tab-pane" id="spmc">
+										<table id="tbl2" class="table table-bordered table-hover">
+											<thead class="p-3 mb-2 bg-info text-white text-center">
+												<tr>
+													<th>Promote Card</th>
+													<th>Release Type</th>
+													<th>Invoice Number</th>
+													<th>Invoice Date</th>
+													<th>Import Date</th>
+													<th>Port Import</th>
+													<th>Country</th>
+													<th>Currency</th>
+													<th>Exchange Rate</th>
+													<th>Note Invoice</th>
+													<th>Note</th>
+													<th>ItemCount</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td class="text-center" style="width: 80px;text-align: center">
+														<button class="btn btn-link font-weight-light" style="padding: 0pt">Select</button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="tab-pane" id="spmcitem">
+										<table id="tbl2" class="table table-bordered table-hover">
+											<thead class="p-3 mb-2 bg-info text-white text-center">
+												<tr>
+													<th>Release Item</th>
+													<th>Invoice Number</th>
+													<th>Item Type</th>
+													<th>BOM Type</th>
+													<th>Machine Item</th>
+													<th>Machine Name</th>
+													<th>Request Number</th>
+													<th>Collateral Item</th>
+													<th>Repair Item</th>
+													<th>Quantity Release</th>
+													<th>Duty Percentage</th>
+													<th>Invoice Value</th>
+													<th>Bill Number</th>
+													<th>Bill Date</th>
+													<th>Invoice Order</th>
+													<th>Line Number</th>
+													<th>Note</th>
+													<th>Unit</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+													<td><input type="text" class="form-control-sm" style="width: 100%"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</div>
+
+

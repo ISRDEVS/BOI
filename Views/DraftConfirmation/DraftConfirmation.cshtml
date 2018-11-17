@@ -1,0 +1,209 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+<div class="content-wrapper">
+	<div class="col-md-12">
+
+		<section class="content">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="box box-solid">
+						<div class="box-header with-border">
+							<h3 class="box-title">Shipping</h3>
+							<div class="box-tools">
+								<button type="button" class="btn btn-box-tool" data-widget="collapse">
+									<i class="fa fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<div class="box-body no-padding">
+							<select class="form-control select2" style="width: 100%;">
+								<option>DIGI-KEY</option>
+								<option>MOUSER</option>
+								<option>ON SEMI</option>
+								<option>SANSHINE</option>
+								<option>SPECTRUM</option>
+								<option>UNISEM MY</option>
+								<option>HI-REL</option>
+							</select>
+						</div>
+					</div>
+					<!-- /. box -->
+					<div class="box box-solid">
+						<div class="box-header with-border">
+							<h3 class="box-title">Job No</h3>
+							<div class="box-tools">
+								<button type="button" class="btn btn-box-tool" data-widget="collapse">
+									<i class="fa fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body no-padding">
+							<select class="form-control select2" style="width: 100%;">
+								<option>J1808-00001</option>
+								<option>J1808-00002</option>
+								<option>J1808-00003</option>
+								<option>J1808-00004</option>
+								<option>J1808-00005</option>
+								<option>J1808-00006</option>
+								<option>J1808-00007</option>
+							</select>
+						</div>
+					</div>
+					<!-- /. box -->
+					<div class="box box-danger collapsed-box  box-solid">
+						<div class="box-header with-border">
+							<h3 class="box-title">Incorrect Item</h3>
+							<div class="box-tools">
+								<button type="button" class="btn btn-box-tool" data-widget="collapse">
+									<i class="fa fa-plus"></i>
+								</button>
+							</div>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body no-padding">
+							<table class="table">
+								<thead class="invisible">
+									<tr>
+										<th class="text-center" style="width:20px"></th>
+									</tr>
+								</thead>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td class="text-left font-light">Missing shipping mark</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td class="text-left font-light">Wrong consignee</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td class="text-left font-light">Wrong invoice no.</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td class="text-left font-light">Wrong BOI License Date</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<!-- /.box-body -->
+					<div class="box box-info collapsed-box box-solid">
+						<div class="box-header with-border">
+							<h3 class="box-title">CIF Calculation</h3>
+							<div class="box-tools">
+								<button type="button" class="btn btn-box-tool" data-widget="collapse">
+									<i class="fa fa-plus"></i>
+								</button>
+							</div>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body no-padding">
+							<form>
+								<table cellspacing="0" cellpadding="3" width="95%">
+									<thead class="invisible">
+										<tr>
+											<th style="width: 50%">Item</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tr>
+										<td style="padding-left: 5px" class="pull-left">Invoice Value</td>
+										<td><input type="text" class="form-control pull-right text-right"></td>
+									</tr>
+									<tr>
+										<td style="padding-left: 5px">Insurance</td>
+										<td><input type="text" class="form-control pull-right text-right"></td>
+									</tr>
+									<tr>
+										<td style="padding-left: 5px">Freight Paid</td>
+										<td><input type="text" class="form-control pull-right text-right"></td>
+									</tr>
+									<tr>
+										<td style="padding-left: 5px">Total CIF</td>
+										<td><input type="text" class="form-control pull-right text-right" readonly=true></td>
+									</tr>
+									<tr>
+										<td style="padding-left: 5px">% Duty Rate</td>
+										<td><input type="text" class="form-control pull-right text-right"></td>
+									</tr>
+									<tr>
+										<td style="padding-left: 5px">Duty Charge</td>
+										<td><input type="text" class="form-control pull-right text-right" readonly=true></td>
+									</tr>
+									<tr>
+										<td style="padding-left: 5px">CIF+Duty</td>
+										<td><input type="text" class="form-control pull-right text-right" readonly=true></td>
+									</tr>
+									<tr>
+										<td style="padding-left: 5px">%VAT</td>
+										<td><input type="text" class="form-control pull-right text-right"></td>
+									</tr>
+									<tr>
+										<td style="padding-left: 5px">VAT Charge</td>
+										<td><input type="text" class="form-control pull-right text-right" readonly=true></td>
+									</tr>
+									<tr>
+										<td style="padding-left: 5px">Total</td>
+										<td><input type="text" class="form-control pull-right text-right" readonly=true></td>
+									</tr>
+								</table>
+								<!---->
+								<div style="padding-right: 15px; padding-top:10px; padding-bottom: 5px">
+									<button type="submit" class="btn btn-sm btn-default pull-right">Search</button>
+									<button type="submit" class="btn btn-sm btn-default pull-right" style="margin-right: 5px">Clear</button>
+								</div>
+								<br>...
+							</form>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+				</div>
+				<!-- /.col -->
+				<div class="col-md-9">
+					<div class="box box-primary">
+						<div class="box-header with-border">
+							<h3 class="box-title">Draft Confirmation</h3>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body">
+							<div class="form-group">
+								<input class="form-control" placeholder="To:">
+							</div>
+							<div class="form-group">
+								<input class="form-control" placeholder="Subject:">
+							</div>
+							<div class="form-group">
+								<textarea id="compose-textarea" class="form-control" style="height: 300px">
+                    </textarea>
+							</div>
+							<div class="form-group">
+								<div class="btn btn-default btn-file">
+									<i class="fa fa-paperclip"></i> Attachment
+									<input type="file" name="attachment">
+								</div>
+								<p class="help-block">Max. 32MB</p>
+							</div>
+						</div>
+						<!-- /.box-body -->
+						<div class="box-footer">
+							<div class="pull-right">
+								<button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Draft</button>
+								<button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send</button>
+							</div>
+						</div>
+						<!-- /.box-footer -->
+					</div>
+					<!-- /. box -->
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+		</section>
+	</div>
+</div>
+
+

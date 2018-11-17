@@ -1,0 +1,57 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+<div class="content-wrapper">
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title"><i class="fa fa-edit"></i><b> BOI Definotion Request</b></h3>
+						<button type="submit" class="btn btn-sm btn-success pull-right" style="margin-left: 10px">Submit</button>
+						<button type="submit" class="btn btn-sm btn-default pull-right">Clear</button>
+					</div>
+					<!-- form start -->
+					<form class="form-horizontal">
+						<div class="box-body">
+							<!--Invoice Number-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">BOI Type : </label>
+								<div class="col-sm-7">
+									<fieldset id="boitype">
+										<input type="radio" class="minimal-red" name="boitype">
+										<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+											   for="boitype">Spare Part</label>
+										<input type="radio" class="minimal-red" name="boitype">
+										<label class="custom-control-label-sm" style="margin-left:7px;margin-right:15px;font-weight: normal"
+											   for="boitype">Machine</label>
+									</fieldset>
+								</div>
+							</div>
+							<!--Invoice Date-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Description : </label>
+								<div class="col-sm-7">
+									<textarea id="compose-textarea" class="form-control" style="height: 150px">
+                        </textarea>
+								</div>
+							</div>
+							<!--Remark-->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Remark :</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" id="remark" placeholder="Remark">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+

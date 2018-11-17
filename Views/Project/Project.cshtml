@@ -1,0 +1,182 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+
+<div class="content-wrapper">
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title">
+							<i class="fa 	fa fa-pencil-square-o"></i>
+							<b> Project</b>
+						</h3>
+						<button type="submit" class="btn btn-sm btn-info pull-right" style="margin-left: 5px" data-toggle="modal" data-target="#modal-upload">New Project</button>
+						<button type="submit" class="btn btn-sm btn-default pull-right">Search</button>
+						<div class="col-md-2 pull-right">
+							<input type="text" class="form-control pull-right">
+						</div>
+						<div class="col-md-3 pull-right">
+							<div class="input-group">
+								<div class="input-group-addon">
+									<i class="fa fa-calendar"></i>
+								</div>
+								<input type="text" class="form-control pull-right" id="reservation">
+							</div>
+						</div>
+					</div>
+					<!-- form start -->
+					<div class="box-body">
+						<div class="box-info with-border">
+							<table id="tbl2" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr class="text-center">
+										<th class="text-center">MMT</th>
+										<th class="text-center">MTAI</th>
+										<th class="text-center">Certificate No</th>
+										<th class="text-center">Dated</th>
+										<th class="text-center">Project Code</th>
+										<th class="text-center">Stock1</th>
+										<th class="text-center">Stock2</th>
+										<th class="text-center">Stock3</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-center"></td>
+										<td class="text-center">1</td>
+										<td class="text-center">1679/2538</td>
+										<td class="text-center">01/09/95</td>
+										<td class="text-center">Terminated</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-center" style="width:45px">
+											<button type="submit" class="btn btn-sm btn-warning" style="padding:0px" data-toggle="modal" data-target="#modal-upload">Update</button>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td class="text-center">2</td>
+										<td class="text-center">1029/2542</td>
+										<td class="text-center">01/08/99</td>
+										<td class="text-center">Terminated</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-center" style="width:45px">
+											<button type="submit" class="btn btn-sm btn-warning" style="padding:0px" data-toggle="modal" data-target="#modal-upload">Update</button>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td class="text-center">3</td>
+										<td class="text-center">1484(6)/2548</td>
+										<td class="text-center">20/01/14</td>
+										<td class="text-center">570052</td>
+										<td class="text-center">M5701111</td>
+										<td></td>
+										<td></td>
+										<td class="text-center" style="width:45px">
+											<button type="submit" class="btn btn-sm btn-warning" style="padding:0px" data-toggle="modal" data-target="#modal-upload">Update</button>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td class="text-center">4</td>
+										<td class="text-center">1484(6)/2549</td>
+										<td class="text-center">20/01/18</td>
+										<td class="text-center">570052</td>
+										<td class="text-center">M5701111</td>
+										<td class="text-center">M6000311</td>
+										<td class="text-center">M6100811</td>
+										<td class="text-center" style="width:45px">
+											<button type="submit" class="btn btn-sm btn-warning" style="padding:0px" data-toggle="modal" data-target="#modal-upload">Update</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="modal fade bd-example-modal" id="modal-upload" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Project Management</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="inputName" class="col-sm-3 control-label">MMT</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="shipper">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail" class="col-sm-3 control-label">MTAI</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="description">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail" class="col-sm-3 control-label">Certificate No</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="description">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail" class="col-sm-3 control-label">Dated</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="description">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail" class="col-sm-3 control-label">Project Code</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="description">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail" class="col-sm-3 control-label">Stock1</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="description">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail" class="col-sm-3 control-label">Stock2</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="description">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail" class="col-sm-3 control-label">Stock3</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="description">
+							</div>
+						</div>
+						<div class="col-sm-12"></div>
+						<div class="form-group">
+							<div class="col-sm-12 pull-right">
+								<button type="submit" class="btn btn-success">Save</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---->
+</div>
+

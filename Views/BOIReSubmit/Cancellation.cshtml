@@ -1,0 +1,66 @@
+﻿
+@{
+	Layout = "_Homes";
+}
+
+<div class="content-wrapper">
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title"><i class="fa fa-exclamation-triangle"></i><b> Cancellation</b></h3>
+						<button type="submit" class="btn btn-sm btn-default pull-right">Search</button>
+						<div class="col-md-3 pull-right">
+							<input [(ngModel)]="invoiceinfo.docno" required name="hawbno" type="text" class="form-control-sm pull-right" id="docno" placeholder="Doc No, APP No">
+						</div>
+					</div>
+					<!-- form start -->
+					<div class="box-body">
+						<div class="box-info with-border">
+							<table id="tbl1" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>PROJ_CODE</th>
+										<th>DOC_NO</th>
+										<th>APP_NO</th>
+										<th>APP_DATE</th>
+										<th>TYPE</th>
+										<th>REASON</th>
+										<th></th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="width: 100px;text-align: center">M6000311</td>
+										<td style="width: 100px;text-align: center">00032736</td>
+										<td style="width: 150px;text-align: center">นร1306R601200038539</td>
+										<td style="width: 100px;text-align: center">12/21/2017</td>
+										<td style="width: 50px;text-align: center">I</td>
+										<td>ยกเลิกยื่นใหม่งวด32862 เนื่องจากยื่นรายการสินค้าผิด</td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-light" style="padding: 0pt">View</button>
+										</td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-danger" style="padding: 0pt">EXCEL</button>
+										</td>
+										<td class="text-center" style="width: 60px;text-align: center">
+											<button class="btn btn-link font-weight-danger" style="padding: 0pt">Submit</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+

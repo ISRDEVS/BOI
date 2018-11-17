@@ -1,0 +1,239 @@
+﻿@using System.Data;
+@model DataTable;
+@{
+	Layout = "_HOmes";
+	int num = 1;
+}
+
+<div class="content-wrapper">
+	<section class="content-header">
+		<h1><i class="fa fa-handshake-o"></i> Raw Material</h1>
+	</section>
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="nav-tabs-custom">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#shipperlist" data-toggle="tab">Raw Material List</a></li>
+						<li><a href="#newitem" data-toggle="tab">New Item</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="active tab-pane" id="shipperlist">
+							<table id="rawmattable" class="table table-bordered table-hover">
+								<thead class="p-3 mb-2 bg-info text-white text-center">
+									<tr>
+										<th>Item</th>
+										<th>ชื่อรอง</th>
+										<th>รายการที่</th>
+										<th>หน่วย</th>
+										<th>คำอธิบาย</th>
+										<th>พิกัด</th>
+										<th>พิกัด</th>
+										<th>หน่วยงานใบอนุญาต</th>
+										<th>Number</th>
+										<th>รหัสสถิติ</th>
+										<th>ประเภทสิ่งของที่ต้องมีใบอนุญาต</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (DataRow rows in Model.Rows)
+									{
+										<tr *ngFor="let item of rawmatlist; let i = index">
+											<td style="width: 50px;text-align: center">@num</td>
+											<td style="width: 150px;text-align: center">@rows["byname"]</td>
+											<td>@rows["items"]</td>
+											<td>@rows["unit"]</td>
+											<td>@rows["description_TH"]</td>
+											<td>@rows["coordinates1"]</td>
+											<td>@rows["coordinates2"]</td>
+											<td>@rows["licenseagency"]</td>
+											<td>@rows["number"]</td>
+											<td>@rows["statistic"]</td>
+											<td>@rows["typeslicense"]</td>
+											<td class="text-center" style="width: 60px;text-align: center">
+												<button class="btn btn-link font-weight-light" style="padding: 0pt">Delete</button>
+											</td>
+											<td class="text-center" style="width: 60px;text-align: center">
+												<button type="button" class="btn btn-link font-weight-danger" style="padding: 0pt" data-toggle="modal" data-target="#modal-default">
+													Update
+												</button>
+												<!--  <button class="btn btn-link font-weight-danger" style="padding: 0pt">Update</button> -->
+											</td>
+										</tr>
+										num++;
+
+									}
+								</tbody>
+							</table>
+						</div>
+						<!-- /.tab-pane -->
+
+						<div class="tab-pane" id="newitem">
+							<form class="form-horizontal" id="fromaddrawmat">
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">ชื่อรอง</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="byname" id="byname" placeholder="ชื่อรอง">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">รายการที่</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="items" id="items" placeholder="รายการที่">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">หน่วย</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="unit" id="unit" placeholder="หน่วย">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">คำอธิบาย</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="description_TH" id="description_TH" placeholder="คำอธิบาย">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">พิกัด</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="coordinates1" id="coordinates1" placeholder="พิกัด">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">พิกัด</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="coordinates2" id="coordinates2" placeholder="พิกัด">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">หน่วยงานใบอนุญาต</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="licenseagency" id="licenseagency" placeholder="หน่วยงานใบอนุญาต">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">Number</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="number" id="number" placeholder="Number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">รหัสสถิติ</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="statistic" id="statistic" placeholder="รหัสสถิติ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputName" class="col-sm-2 control-label">ประเภทสิ่งของที่ต้องมีใบอนุญาต</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="typeslicense" id="typeslicense" placeholder="ประเภทสิ่งของที่ต้องมีใบอนุญาต">
+									</div>
+								</div>
+
+								<div class="col-sm-2"></div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<button type="button" onclick="SaveData('fromaddrawmat','MasterData','SaveRawmat')" class="btn btn-success">Save</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- /.tab-pane -->
+					</div>
+					<!-- /.tab-content -->
+				</div>
+				<!-- /.nav-tabs-custom -->
+			</div>
+		</div>
+	</section>
+
+</div>
+
+<div class="modal fade" id="modal-default">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Update Raw Mat Terial  List</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">ชื่อรอง</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="ชื่อรอง">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">รายการที่</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="รายการที่">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">หน่วย</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="หน่วย">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">คำอธิบาย</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="คำอธิบาย">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">พิกัด</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="พิกัด">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">พิกัด</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="พิกัด">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">หน่วยงานใบอนุญาต</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="หน่วยงานใบอนุญาต">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Number</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="Number">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">รหัสสถิติ</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="รหัสสถิติ">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">ประเภทสิ่งของที่ต้องมีใบอนุญาต</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="shipper" placeholder="ประเภทสิ่งของที่ต้องมีใบอนุญาต">
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+
