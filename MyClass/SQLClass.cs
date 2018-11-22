@@ -37,7 +37,7 @@ namespace BOIMVC.MyClass
         }
         public DataTable SelectallData(string tablename,string filepath)
         {
-            string sqlcmd = "select * from " + tablename;
+            string sqlcmd = "select * from " + tablename +" where flag_delete=0";
                 DataTable dataTable = new DataTable();
             SqlConnection connection = new SqlConnection(connectionstrin(filepath));
             try
@@ -76,6 +76,8 @@ namespace BOIMVC.MyClass
             }
 
         }
+
+        
     }
 
  

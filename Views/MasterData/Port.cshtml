@@ -19,9 +19,11 @@
 					</ul>
 					<div class="tab-content">
 						<div class="active tab-pane" id="shipperlist">
-							<table id="tbl1" class="table table-bordered table-hover">
+							<table id="tblist" class="table table-bordered table-hover">
 								<thead class="p-3 mb-2 bg-info text-white text-center">
 									<tr>
+										<th style="display: none"></th>
+										<th style="display: none"></th>
 										<th>Item</th>
 										<th>Value_Data</th>
 										<th>Thai_Label</th>
@@ -34,6 +36,8 @@
 									@foreach (DataRow rows in Model.Rows)
 									{
 										<tr >
+											<td style="display: none">@rows[0]</td>
+											<td style="display: none">tbname</td>
 											<td style="width: 50px;text-align: center">@num</td>
 											<td style="width: 150px;text-align: center">@rows["value_Data"]</td>
 											<td>@rows["thai_Label"]</td>
